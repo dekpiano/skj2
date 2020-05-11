@@ -31,6 +31,7 @@
 			$('.top-header').addClass('fixed-menu');
 		} else {
 			$('.top-header').removeClass('fixed-menu');
+			
 		}
 	});
 

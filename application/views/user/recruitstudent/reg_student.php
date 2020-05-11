@@ -22,12 +22,10 @@ label {
     </div>
 </div>
 
-<div class="container py-5">
-   
 <form class="needs-validation contact-block" enctype="multipart/form-data" method="post" novalidate=""
         action="<?=base_url('control_recruitstudent/reg_insert')?>">
         <input hidden type="text" name="recruit_regLevel" id="recruit_regLevel" value="<?=$this->uri->segment(2);?>">
-
+<div class="container ">
         <div id="smartwizard">
             <ul>
                 <li><a href="#step-1">Step 1<br /><small>เลขประจำตัวประชาชน</small></a></li>

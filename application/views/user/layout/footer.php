@@ -90,12 +90,13 @@
 <script src="<?=base_url()?>cssjs/js/custom.js"></script>
 
 <script src="<?=base_url()?>cssjs/js/smartwizard/jquery.smartWizard.min.js"></script>
-
+<script src="<?=base_url()?>cssjs/js/jquery.lazy.min.js"></script>
 <script src="<?=base_url()?>asset/js/jquery.inputmask.min.js"></script>
 <!-- Template Main JS File -->
 <script src="<?=base_url()?>/asset/user/js/main.js?v=1000"></script>
-
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
 
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
@@ -109,67 +110,39 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
-
+<script src="<?=base_url()?>cssjs/js/demo/js.js"></script>
 </body>
 <script>
 $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
     $(":input").inputmask();
-
-      // Step show event
-      $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
-               //alert("You are on step "+stepNumber+" now");
-               if(stepPosition === 'first'){
-                   $("#prev-btn").addClass('disabled');
-               }else if(stepPosition === 'final'){
-                   $("#next-btn").addClass('disabled');
-               }else{
-                   $("#prev-btn").removeClass('disabled');
-                   $("#next-btn").removeClass('disabled');
-               }
-            });
-
-            // Toolbar extra buttons
-            var btnFinish = $('<button></button>').text('Finish')
-                                             .addClass('btn btn-info')
-                                             .on('click', function(){ alert('Finish Clicked'); });
-            var btnCancel = $('<button></button>').text('Cancel')
-                                             .addClass('btn btn-danger')
-                                             .on('click', function(){ $('#smartwizard').smartWizard("reset"); });
+    $('.lazy').Lazy({
+        // your configuration goes here
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        visibleOnly: true,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
 
 
-            // Smart Wizard
-            $('#smartwizard').smartWizard({
-                    selected: 0,
-                    theme: 'dots',
-                    transitionEffect:'fade',
-                    showStepURLhash: true,
-                    toolbarSettings: {
-                                      showNextButton: false, // show/hide a Next button
-                                      showPreviousButton: false, // show/hide a Previous button
-                                    }
-            });
+    $('#container').imagesLoaded()
+  .always( function( instance ) {
+    console.log('all images loaded');
+  })
+  .done( function( instance ) {
+    console.log('all images successfully loaded');
+  })
+  .fail( function() {
+    console.log('all images loaded, at least one is broken');
+  })
+  .progress( function( instance, image ) {
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  });
 
 
-            // External Button Events
-            $("#reset-btn").on("click", function() {
-                // Reset wizard
-                $('#smartwizard').smartWizard("reset");
-                return true;
-            });
-
-            $("#prev-btn").on("click", function() {
-                // Navigate previous
-                $('#smartwizard').smartWizard("prev");
-                return true;
-            });
-
-            $("#next-btn").on("click", function() {
-                // Navigate next
-                $('#smartwizard').smartWizard("next");
-                return true;
-            });
-    
     $(".dropdown").hover(
         function() {
             $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideDown("400");
@@ -183,29 +156,28 @@ $(document).ready(function() {
 
 });
 
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-      'use strict';
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+    'use strict';
 
-      window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
+    window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
 
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-              form.addEventListener('submit', function(event) {
-                  if (form.checkValidity() === false) {
-                      event.preventDefault();
-                      event.stopPropagation();
-                      swal("แจ้งเตือน", "กรุณากรอกข้อมูลให้ครบ!", "warning")
-                  }
-                  form.classList.add('was-validated');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    swal("แจ้งเตือน", "กรุณากรอกข้อมูลให้ครบ!", "warning")
+                }
+                form.classList.add('was-validated');
 
-              }, false);
-          });
-      }, false);
-    })();
-
+            }, false);
+        });
+    }, false);
+})();
 </script>
 <script type="text/javascript">
 function readURL(input) {

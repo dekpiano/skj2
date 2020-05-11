@@ -39,7 +39,7 @@
     <link href="<?=base_url();?>asset/user/vendor/animate.css/animate.min.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="<?=base_url()?>cssjs/css/smartwizard/smart_wizard.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>cssjs/css/smartwizard/smart_wizard_theme_dots.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>cssjs/css/smartwizard/smart_wizard_theme_arrows.min.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -81,7 +81,7 @@
   animation: spring 300ms ease-out;
   text-shadow: #000;
   font-weight: bold;
-  background-color: #fff; /* Green */
+  background-color: #fb51be;
     border: none;
     text-align: center;
     text-decoration: none;
@@ -156,7 +156,7 @@
                 <div class="collapse navbar-collapse justify-content-end li_hov" id="navbar-wd">
                     <ul class="navbar-nav ">
                     <li class="nav-item dropdown">
-                            <a class=" nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-school"></i> เกี่ยวกับโรงเรียน</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
                                 <?php foreach ($Allabout as $key => $v_about) : ?>
@@ -166,7 +166,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class=" nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i> บุคลากร</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
                                 <a class="dropdown-item" href="<?=base_url('Personnel/คณะผู้บริหาร')?>"><i
@@ -181,9 +181,9 @@
                             </div>
                         </li>
                         <li class="nav-item animated  heartBeat delay-1s">
-                            <a class=" nav-link" href="<?=base_url('RegStudent');?>"><i class="fas fa-bell"></i> รับสมัครนักเรียน</a>
+                            <a class="nav-link" href="<?=base_url('RegStudent');?>"><i class="fas fa-bell"></i> รับสมัครนักเรียน</a>
                         </li>
-                        <li><a class="nav-link active" style="background:#fff;color:#000;" href="<?=base_url('login')?>"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        <li><a class="nav-link active1" style="background:#fff;" href="<?=base_url('login')?>"><i class="fas fa-sign-in-alt"></i> Login</a></li>
                     </ul>
                 </div>
                 <div class="search-box">
@@ -207,3 +207,5 @@
         animation-iteration-count: infinite;
     }
     </style>
+
+    
