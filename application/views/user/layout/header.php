@@ -38,6 +38,8 @@
     <link href="<?=base_url();?>asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="<?=base_url();?>asset/user/vendor/animate.css/animate.min.css" rel="stylesheet" type="text/css">
 
+    <link rel="stylesheet" href="<?=base_url()?>cssjs/css/smartwizard/smart_wizard.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>cssjs/css/smartwizard/smart_wizard_theme_dots.min.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -72,7 +74,7 @@
     transform: scale(1.5);
 }
 
-li:hover {
+.li_hov li:hover {
   /* background-image: url('https://scottyzen.sirv.com/Images/v/button.png'); */
   background-size: 100% 100%;
   color: #fff;
@@ -96,7 +98,7 @@ li:hover {
     color: #244bd9;
 }
 
-li:active {
+.li_hov li:active {
   transform: translateY(4px);
 }
 @keyframes spring {
@@ -130,7 +132,7 @@ li:active {
 
 </style>
 
-<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98" style="background-color: #eeeeee47;">
 
     <!-- LOADER -->
     <div id="preloader">
@@ -151,7 +153,7 @@ li:active {
                     <span></span>
                     <span></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                <div class="collapse navbar-collapse justify-content-end li_hov" id="navbar-wd">
                     <ul class="navbar-nav ">
                     <li class="nav-item dropdown">
                             <a class=" nav-link dropdown-toggle" href="http://example.com" id="dropdown01"

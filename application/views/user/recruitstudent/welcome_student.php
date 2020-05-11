@@ -1,5 +1,5 @@
 <center>
-<div style="padding-top: 200px;" >
+<div style="padding: 100px; 0px" >
     <div class="col-md-12 mx-auto justify-content-between align-items-center">
         <h1 class="display-4 font-weight-normal">สมัครเรียนเรียบร้อย</h1>
         <p> <img src="https://www.bootstrapdash.com/demo/simple/images/Group171.svg"></p>
