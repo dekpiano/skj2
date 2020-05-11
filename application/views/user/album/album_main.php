@@ -22,7 +22,7 @@
                     <img class="card-img-top " src="<?=$v_images->img_mainpic;?>" alt="<?=$v_images->img_title;?>"
                         style="width:100%">
                 </div>
-                <div class="card-body text-center">
+                <div class="card-body text-center h5">
                     <?=$v_images->img_title?>
             </a>
         </div>

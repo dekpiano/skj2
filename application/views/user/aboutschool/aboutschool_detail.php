@@ -18,7 +18,7 @@
         <div class="col-lg-8">
             <div class="card border-5 shadow mb-4">
                 <div class="card-body">
-                    <h5 class="m-0"><?=$about[0]->about_menu;?></h5>
+                    <h3 class="m-0"><?=$about[0]->about_menu;?></h3>
                     <hr>
                     <?=$about[0]->about_detail;?>
                 </div>
@@ -28,7 +28,7 @@
 
             <div class="card border-2 shadow mb-4">
                 <div class="card-body">
-                    <h5 class="mb-0">เกี่ยวกับโรงเรียน</h5>
+                    <h3 class="mb-0">เกี่ยวกับโรงเรียน</h3>
                     <br>
                     <?php foreach ($Allabout as $key => $v_Allabout) : ?>
                     <div class="d-flex justify-content-between small">

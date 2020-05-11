@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="<?=base_url()?>cssjs/css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?=base_url()?>cssjs/css/custom.css">
+    <link href="<?=base_url();?>asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?=base_url();?>asset/user/vendor/animate.css/animate.min.css" rel="stylesheet" type="text/css">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -70,6 +72,61 @@
     transform: scale(1.5);
 }
 
+li:hover {
+  /* background-image: url('https://scottyzen.sirv.com/Images/v/button.png'); */
+  background-size: 100% 100%;
+  color: #fff;
+  animation: spring 300ms ease-out;
+  text-shadow: #000;
+  font-weight: bold;
+  background-color: #fff; /* Green */
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+    border-top: 4px solid #e72e9b;;
+}
+
+.top-header .navbar .navbar-collapse ul li a:hover, .top-header .navbar .navbar-collapse ul li a:focus{
+    color: #244bd9;
+}
+
+li:active {
+  transform: translateY(4px);
+}
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+.shameless-plug{
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  padding: 8px 20px;
+  color: #ccc;
+  text-decoration: none;
+}
+
 
 </style>
 
@@ -85,21 +142,20 @@
     <!-- END LOADER -->
 
     <!-- Start header -->
-    <header class="top-header">
+    <header class="top-header ">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="<?=base_url()?>cssjs/images/logo.png" alt="image"></a>
+                <a class="navbar-brand" href="<?=base_url();?>"><img src="<?=base_url()?>cssjs/images/logo.png" alt="image"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ">
                     <li class="nav-item dropdown">
                             <a class=" nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                    class="icofont-university"></i> เกี่ยวกับโรงเรียน</a>
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-school"></i> เกี่ยวกับโรงเรียน</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
                                 <?php foreach ($Allabout as $key => $v_about) : ?>
                                 <a class="dropdown-item" href="<?=base_url('AboutSchool/').$v_about->about_id;?>"><i
@@ -109,8 +165,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class=" nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                    class="icofont-teacher"></i> บุคลากร</a>
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i> บุคลากร</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
                                 <a class="dropdown-item" href="<?=base_url('Personnel/คณะผู้บริหาร')?>"><i
                                         class="icofont-dotted-right"></i> คณะผู้บริหาร</a>
@@ -124,10 +179,9 @@
                             </div>
                         </li>
                         <li class="nav-item animated  heartBeat delay-1s">
-                            <a class=" nav-link" href="<?=base_url('RegStudent');?>"><i
-                                    class="icofont-download "></i> รับสมัครนักเรียน</a>
+                            <a class=" nav-link" href="<?=base_url('RegStudent');?>"><i class="fas fa-bell"></i> รับสมัครนักเรียน</a>
                         </li>
-                        <li><a class="nav-link active" style="background:#fff;color:#000;" href="<?=base_url('login')?>">Login</a></li>
+                        <li><a class="nav-link active" style="background:#fff;color:#000;" href="<?=base_url('login')?>"><i class="fas fa-sign-in-alt"></i> Login</a></li>
                     </ul>
                 </div>
                 <div class="search-box">

@@ -31,16 +31,18 @@
         <div class="col-12 col-lg-7 p-0 img-digital grid-margin grid-margin-lg-0 aos-init aos-animate"
             data-aos="fade-left">
             <div class="animated fadeInRightBig">
-                <a href="<?=base_url('RegStudent/1');?>" class="bb btn btn-lg btn-block btn-primary"><i
-                        class="icofont-tasks-alt"></i> สมัครเรียน ชั้นมัธยมศึกษาปีที่ 1</a>
+                <a href="<?=base_url('RegStudent/1');?>" class="bb btn btn-lg btn-block btn-primary">
+                    <i class="fas fa-user-plus"></i> สมัครเรียน ชั้นมัธยมศึกษาปีที่ 1
+                </a>
             </div>
         </div>
     </div>
     <div class="row align-items-center ">
         <div class="col-12 col-lg-7 p-0 order-2 order-lg-1 ">
             <div class=" animated fadeInLeftBig">
-                <a href="<?=base_url('RegStudent/4');?>" class="bb btn btn-lg btn-block btn-primary"><i
-                        class="icofont-tasks-alt"></i> สมัครเรียน ชั้นมัธยมศึกษาปีที่ 4</a>
+                <a href="<?=base_url('RegStudent/4');?>" class="bb btn btn-lg btn-block btn-primary">
+                <i class="fas fa-user-plus"></i> สมัครเรียน ชั้นมัธยมศึกษาปีที่ 4
+                </a>
             </div>
         </div>
         <div class="col-12 col-lg-5 order-lg-1  animated fadeInRightBig">
@@ -55,10 +57,9 @@
 
         </div>
         <div class="col-md-6 mt-4 align-items-center animated fadeInRightBig">
-            <a href="<?=base_url('checkRegister');?>" class="bb btn btn-lg btn-block btn-warning"><i
-                    class="icofont-checked"></i> ตรวจสอบการสมัคร</a>
+            <a href="<?=base_url('checkRegister');?>" class="bb btn btn-lg btn-block btn-warning"><i class="fas fa-user-check"></i> ตรวจสอบการสมัคร</a>
             <a target="_blank" href="<?=base_url('uploads/recruitstudent/คู่มือการสมัครเรียนออนไลน์.pdf');?>"
-                class="bb btn btn-lg btn-block btn-secondary"><i class="icofont-book-alt"></i> คู่มือการสมัคร</a>
+                class="bb btn btn-lg btn-block btn-secondary"><i class="fas fa-book-reader"></i> คู่มือการสมัคร</a>
         </div>
     </div>
 </div>

@@ -5,11 +5,7 @@
      <footer class="footer-box">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="logo">
-                        <a href="index.html"><img src="images/footer_logo.png" alt="#" /></a>
-                    </div>
-                </div>
+                
                 <div class="col-lg-12 white_fonts">
                     <h4 class="text-align">Contact Us</h4>
                 </div>
@@ -17,29 +13,27 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="full icon text_align_center">
-                                <img src="images/social1.png">
+                            <i class="fas fa-university fa-4x"></i>
                             </div>
                             <div class="full white_fonts text_align_center">
-                                <p>London 145
-                                    <br>United Kingdom</p>
+                                <p>160 เมืองนครสวรรค์
+                                    <br>นครสวรรค์</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="full icon text_align_center">
-                                <img src="images/social2.png">
+                            <i class="fas fa-envelope fa-4x"></i>
                             </div>
                             <div class="full white_fonts text_align_center">
-                                <p>consultation@gmail.com
-                                    <br>consultation@gmail.com</p>
+                                <p>skj160@gmail.com</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="full icon text_align_center">
-                                <img src="images/social3.png">
+                                <i class="fas fa-phone-alt fa-4x"></i>
                             </div>
                             <div class="full white_fonts text_align_center">
-                                <p>+7586656566
-                                    <br>+7586656566</p>
+                                <p> 056-255857</p>
                             </div>
                         </div>
                     </div>
@@ -51,10 +45,10 @@
                     <div class="full">
                         <div class="center">
                             <ul class="social_icon">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -68,14 +62,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="crp">© 2019 RD resume . All Rights Reserved.</p>
-                    <ul class="bottom_menu">
+                    <p class="crp">© 2020 SKJ . All Rights Reserved.</p>
+                    <!-- <ul class="bottom_menu">
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Find jobs</a></li>
                         <li><a href="contact.html">Contact us</a></li>
                         <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Privacy</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -119,6 +113,18 @@
       $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
           $(":input").inputmask();         
+
+          $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+            $(this).toggleClass('open');       
+        }
+    );
+    
         });
        
       // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -162,21 +168,7 @@
         readURL(this);
       });
 
-
-      $('#container').imagesLoaded()
-      .always( function( instance ) {
-        console.log('all images loaded');
-      })
-      .done( function( instance ) {
-        console.log('all images successfully loaded');
-      })
-      .fail( function() {
-        console.log('all images loaded, at least one is broken');
-      })
-      .progress( function( instance, image ) {
-        var result = image.isLoaded ? 'loaded' : 'broken';
-        console.log( 'image is ' + result + ' for ' + image.img.src );
-      });
+     
 
   </script> 
 
