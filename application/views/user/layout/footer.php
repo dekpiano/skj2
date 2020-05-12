@@ -87,7 +87,7 @@
 <script src="<?=base_url()?>cssjs/js/contact-form-script.js"></script>
 <script src="<?=base_url()?>cssjs/js/isotope.min.js"></script>
 <script src="<?=base_url()?>cssjs/js/images-loded.min.js"></script>
-<script src="<?=base_url()?>cssjs/js/custom.js"></script>
+<script src="<?=base_url()?>cssjs/js/custom.js?v=1000"></script>
 
 <script src="<?=base_url()?>cssjs/js/smartwizard/jquery.smartWizard.min.js"></script>
 <script src="<?=base_url()?>cssjs/js/jquery.lazy.min.js"></script>

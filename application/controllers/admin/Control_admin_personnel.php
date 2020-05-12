@@ -109,10 +109,10 @@ class Control_admin_personnel extends CI_Controller {
 				//print_r($error['error']);
 				$this->session->set_flashdata(array('msg_uploadfile'=> 'on','messge' => 'รูปไม่ได้ขนาดที่กำหนดไว้'));
 				?>
-				<script>					
-					  window.history.back();					
-					</script>
-				<?php
+<script>
+window.history.back();
+</script>
+<?php
 			}
 		}else{
 			$data = array(	'pers_id' => $this->input->post('pers_id'),
@@ -136,10 +136,6 @@ class Control_admin_personnel extends CI_Controller {
 						redirect('admin/personnel', 'refresh');
 					}
 		}
-	
-
-		
-
 		
 	}
 
@@ -160,7 +156,7 @@ class Control_admin_personnel extends CI_Controller {
 		$this->db->from('tb_personnel');
 		$this->db->where('pers_id',$id);
 		$data['pers'] =	$this->db->get()->result();
-		$data['action'] = 'update_personnel/'.$data['pers'][0]->pers_img;;
+		$data['action'] = 'update_personnel/'.($data['pers'][0]->pers_img == '' ? '0' : $data['pers'][0]->pers_img);
 
 		$this->load->view('admin/layout/header.php',$data);
 		$this->load->view('admin/layout/navber.php');
@@ -214,10 +210,10 @@ class Control_admin_personnel extends CI_Controller {
 				//print_r($error['error']);
 				$this->session->set_flashdata(array('msg_uploadfile'=> 'on','messge' => 'รูปไม่ได้ขนาดที่กำหนดไว้'));
 				?>
-				<script>					
-					  window.history.back();					
-					</script>
-				<?php
+<script>
+window.history.back();
+</script>
+<?php
 			}
 		}else{
 					$data = array(	

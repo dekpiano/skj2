@@ -25,8 +25,9 @@
     <link href="<?=base_url()?>/asset/user/img/logo_fav.jpg" rel="apple-touch-icon">
 
 
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Pogo Slider CSS -->
     <link rel="stylesheet" href="<?=base_url()?>cssjs/css/pogo-slider.min.css">
     <!-- Site CSS -->
@@ -43,7 +44,7 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->   
+    <![endif]-->
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 
 
@@ -75,61 +76,79 @@
 }
 
 .li_hov li:hover {
-  /* background-image: url('https://scottyzen.sirv.com/Images/v/button.png'); */
-  background-size: 100% 100%;
-  color: #fff;
-  animation: spring 300ms ease-out;
-  text-shadow: #000;
-  font-weight: bold;
-  background-color: #fb51be;
+    /* background-image: url('https://scottyzen.sirv.com/Images/v/button.png'); */
+    background-size: 100% 100%;
+    color: #fff;
+    animation: spring 300ms ease-out;
+    text-shadow: #000;
+    font-weight: bold;
+    background-color: #fb51be;
     border: none;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 10px;
-    border-top: 4px solid #e72e9b;;
+    border-top: 4px solid #e72e9b;
+    ;
 }
 
-.top-header .navbar .navbar-collapse ul li a:hover, .top-header .navbar .navbar-collapse ul li a:focus{
+.top-header .navbar .navbar-collapse ul li a:hover,
+.top-header .navbar .navbar-collapse ul li a:focus {
     color: #244bd9;
 }
 
 .li_hov li:active {
-  transform: translateY(4px);
+    transform: translateY(4px);
 }
+
 @keyframes spring {
-  15% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1.2, 1.1);
-  }
-  40% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(0.95, 0.95);
-  }
-  75% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1.05, 1);
-  }
-  100% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1, 1);
-  }
+    15% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.2, 1.1);
+    }
+
+    40% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(0.95, 0.95);
+    }
+
+    75% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.05, 1);
+    }
+
+    100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1, 1);
+    }
 }
 
-.shameless-plug{
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  padding: 8px 20px;
-  color: #ccc;
-  text-decoration: none;
+.shameless-plug {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    padding: 8px 20px;
+    color: #ccc;
+    text-decoration: none;
+}
+.cool::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
 }
 
-
+.cool:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
 </style>
 
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98" style="background-color: #eeeeee47;">
@@ -147,17 +166,34 @@
     <header class="top-header ">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="<?=base_url();?>"><img src="<?=base_url()?>cssjs/images/logo.png" alt="image"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <a class="navbar-brand" href="<?=base_url();?>"><img src="<?=base_url()?>cssjs/images/logo.png"
+                        alt="image"></a>
+
+                <div class="search-box d-none d-lg-block d-md-none">
+                    <a class="nav-link active1" style="background:#fff;" href="<?=base_url('login')?>"><i
+                            class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <header class="top-header1">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid ">
+            <a class="nav-link cool  d-block d-sm-none d-md-block d-lg-none " style="background:#fff;" href="<?=base_url('login')?>"><i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end li_hov" id="navbar-wd">
-                    <ul class="navbar-nav ">
-                    <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-school"></i> เกี่ยวกับโรงเรียน</a>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown cool">
+                            <a class="nav-link  dropdown-toggle" href="#" id="dropdown01"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                    class="fas fa-school"></i> เกี่ยวกับโรงเรียน</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
                                 <?php foreach ($Allabout as $key => $v_about) : ?>
                                 <a class="dropdown-item" href="<?=base_url('AboutSchool/').$v_about->about_id;?>"><i
@@ -165,9 +201,10 @@
                                 <?php endforeach; ?>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i> บุคลากร</a>
+                        <li class="nav-item dropdown cool">
+                            <a class="nav-link  dropdown-toggle" href="#" id="dropdown01"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                    class="fas fa-users"></i> บุคลากร</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
                                 <a class="dropdown-item" href="<?=base_url('Personnel/คณะผู้บริหาร')?>"><i
                                         class="icofont-dotted-right"></i> คณะผู้บริหาร</a>
@@ -180,17 +217,12 @@
                                     ฝ่ายสนับสนุนการสอน</a>
                             </div>
                         </li>
-                        <li class="nav-item animated  heartBeat delay-1s">
-                            <a class="nav-link" href="<?=base_url('RegStudent');?>"><i class="fas fa-bell"></i> รับสมัครนักเรียน</a>
+                        <li class="nav-item cool animated  heartBeat delay-1s">
+                            <a class="nav-link " href="<?=base_url('RegStudent');?>"><i class="fas fa-bell"></i>
+                                รับสมัครนักเรียน</a>
                         </li>
-                        <li><a class="nav-link active1" style="background:#fff;" href="<?=base_url('login')?>"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+
                     </ul>
-                </div>
-                <div class="search-box">
-                    <input type="text" class="search-txt" placeholder="Search">
-                    <a class="search-btn">
-                        <img src="<?=base_url()?>cssjs/images/search_icon.png" alt="#" />
-                    </a>
                 </div>
             </div>
         </nav>
@@ -207,5 +239,3 @@
         animation-iteration-count: infinite;
     }
     </style>
-
-    

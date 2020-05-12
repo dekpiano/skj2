@@ -161,7 +161,7 @@ a {
     }
 }
 </style>
-<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5  mx-auto">
     <div class="card card0 border-0">
         <div class="row d-flex">
             <div class="col-lg-6 d-none d-sm-none d-lg-block">
