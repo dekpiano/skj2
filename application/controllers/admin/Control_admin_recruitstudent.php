@@ -189,7 +189,7 @@ class Control_admin_recruitstudent extends CI_Controller {
 			'recruit_idCard' => $this->input->post('recruit_idCard'),
 			'recruit_phone' => $this->input->post('recruit_phone'),
 			'recruit_address' => $this->input->post('recruit_address'),
-			'recruit_tpyeRoom' => $this->input->post('recruit_tpyeRoom'),							
+			'recruit_tpyeRoom' => $this->input->post('recruit_tpyeRoom'),
 			'recruit_year' => (date('Y')+543)
 		);
 	
@@ -365,18 +365,21 @@ class Control_admin_recruitstudent extends CI_Controller {
     	if($datapdf[0]->recruit_copyAddress != ''){
     		$html .= '<div style="position:absolute;top:670px;left:455px; width:100%"><img src="https://img.icons8.com/metro/26/000000/checkmark.png"/></div>';
     	}
-    	
-    	
-    	
-
-
- 
 		$mpdf->SetDocTemplate('uploads/recruitstudent/pdf_registudent.pdf',true);
 
         $mpdf->WriteHTML($html);
         $mpdf->Output('Reg_'.$datapdf[0]->recruit_idCard.'.pdf','I'); // opens in browser
         //$mpdf->Output('arjun.pdf','D'); // it downloads the file into the user system, with give name
-    }	
+    }
+
+
+    public function confrim_report($id)
+	{	
+		//echo $this->input->post('recruit_status'); exit();
+		$data = array('recruit_status' => $this->input->post('recruit_status'));
+		$update_comfrim = $this->db->update('tb_recruitstudent',$data,"recruit_id='".$id."'");
+		 redirect('admin/control_admin_recruitstudent/edit_recruitstudent/'.$id);
+	}	
 
 }
 

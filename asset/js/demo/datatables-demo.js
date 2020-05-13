@@ -21,7 +21,7 @@ $(document).ready(function() {
 });
   
   $('#dataTable').DataTable({
-        "order": [[ 0, "asc" ]],
+        "order": [[ 0, "DESC" ]],
        dom: 'Bfrtip',
         buttons: [
             'copyHtml5',

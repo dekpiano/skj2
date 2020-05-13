@@ -297,13 +297,30 @@
               </div>
             </div>
 
-            <hr class="mb-4">
+            <hr class="mb-4">            
          <button type="submit" class="btn btn-lg btn-<?=$color?>  btn-block"><?=$icon?> <?php echo end($breadcrumbs);?></button>
 
 
                     </form>
+                    <hr>
+<h3>Admin ยืนยันข้อมูล เพื่อพิมพ์ใบสมัครสอบ</h3>
+<form method="post" action="<?=base_url('admin/Control_admin_recruitstudent/confrim_report/').$recruit[0]->recruit_id;?>">
+  <div class="form-group">
+    <?php 
+    $confrim = array('ผ่านการตรวจสอบ','ไม่มีรูปภาพ หรือรูปภาพไม่ผ่านการตรวจสอบ','กรอกข้อมูลไม่ครบถ้วน');
+    foreach ($confrim as $key => $value) : ?>
 
+      <div class="custom-control custom-radio">
+        <input <?=$value == $recruit[0]->recruit_status ? 'checked' : ''?> type="radio" id="recruit_status<?=$key;?>" name="recruit_status" class="custom-control-input" value="<?=$value;?>">
+        <label class="custom-control-label" for="recruit_status<?=$key;?>"><?=$value;?></label>
+      </div>
+    <?php endforeach; ?>
+   
+</div>
+  <button type="submit" class="btn btn-lg btn-success  btn-block">ยืนยันข้อมูล</button>
+</form>
                 </div>
+
               </div>
             </div>
             

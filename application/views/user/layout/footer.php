@@ -114,6 +114,11 @@
 </body>
 <script>
 $(document).ready(function() {
+    $("#report_stu").on('click',function(){
+  $.post("<?=base_url('Control_recruitstudent/check_print');?>",{search_stu: $('#search_stu').val()},function(data){
+    alert(data);
+  });
+});
     $('[data-toggle="tooltip"]').tooltip();
     $(":input").inputmask();
     $('.lazy').Lazy({

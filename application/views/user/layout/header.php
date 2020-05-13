@@ -166,7 +166,7 @@
     <header class="top-header ">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="<?=base_url();?>"><img src="<?=base_url()?>cssjs/images/logo.png"
+                <a class="navbar-brand" href="<?=base_url();?>"><img src="<?=base_url()?>asset/user/img/LogoSKJ3.png" style="width: 222px;"
                         alt="image"></a>
 
                 <div class="search-box d-none d-lg-block d-md-none">
@@ -217,9 +217,13 @@
                                     ฝ่ายสนับสนุนการสอน</a>
                             </div>
                         </li>
-                        <li class="nav-item cool animated  heartBeat delay-1s">
+                        <!-- <li class="nav-item cool animated  heartBeat delay-1s">
                             <a class="nav-link " href="<?=base_url('RegStudent');?>"><i class="fas fa-bell"></i>
                                 รับสมัครนักเรียน</a>
+                        </li> -->
+                        <li class="nav-item cool animated  heartBeat delay-1s">
+                            <a class="nav-link " href="<?=base_url('PrintStudent');?>"><i class="fas fa-bullhorn"></i>
+                                ประกาศผลสมัครสอบ</a>
                         </li>
 
                     </ul>
