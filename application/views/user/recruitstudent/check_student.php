@@ -79,9 +79,9 @@ color: #6c757d;
 	<div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
             <div class="bd-callout bd-callout-danger ">
-              <h4>ตรวจสอบข้อมูลเพื่อพิมพ์สมัครสอบ</h4>
+              <h4>ตรวจสอบข้อมูลเพื่อพิมพ์สมัครสอบ </h4>
             </div>
-            <form class="card card-sm needs-validation" novalidate="" method="get" action="<?=base_url('checkRegister/dataStudent');?>" >
+            <form class="card card-sm needs-validation" novalidate="" method="get" action="<?=base_url('checkRegister/dataStudent?edit=').$this->input->get("edit");?>" >
                 <div class="card-body row no-gutters align-items-center">
                     <div class="col-auto">
                         <i class="icofont-search-2"></i>
@@ -90,7 +90,7 @@ color: #6c757d;
                     <div class="col">
                         <input class="form-control form-control-lg form-control-borderless " name="search_stu" type="text" placeholder="ระบุ เลขประจำตัวประชาชน" value="<?=@$stu->recruit_idCard == '' ? '' : $stu->recruit_idCard ?>" required data-inputmask="'mask': '9-9999-99999-99-9'">
                         <div class="invalid-feedback">
-                          ระบุเลขประจำตัวประชาชน 13 หลัก
+                          ระบุเลขประจำตัวประชาชน 13 หลัก 
                         </div>
                     </div>
                     <!--end of col-->

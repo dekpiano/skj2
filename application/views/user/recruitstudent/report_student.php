@@ -44,8 +44,8 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <p>
-                                            <h2>วันเสาร์ที่ ๓๐ พฤษภาคม ๒๕๖๓
-                                                นักเรียนสอบเข้าศึกษาต่อระดับชั้นมัธยมศึกษาปีที่ 1</h2>
+                                            <h2>
+                                            วันเสาร์ที่ 30 พฤษภาคม 2563 นักเรียนสอบเข้าศึกษาต่อระดับชั้นมัธยมศึกษาปีที่ 1 </h2>
                                         </p>
                                         <table class="table">
                                             <thead class="thead-light">
@@ -145,7 +145,9 @@
                                                                             <span
                                                                                 class="badge badge-danger badge-pill"><i
                                                                                     class="fas fa-edit"></i>
-                                                                                กลับไปแก้ไข</span>
+                                                                                <a href="<?=base_url('checkRegister?edit=0');?>"
+                                                                                    class="text-white">กลับไปแก้ไข</a>
+                                                                            </span>
                                                                             <?php endif; ?>
                                                                         </td>
                                                                     </tr>
@@ -297,7 +299,16 @@
 
 
             </div>
+            <div class="alert alert-warning mt-5" role="alert">
+                <h4 class="alert-heading">หมายเหตุ</h4>
+                <p> นักเรียนโควตามัธยมศึกษาปีที่ ๓ โรงเรียนสวนกุหลาบวิทยาลัย (จิรประวัติ) นครสวรรค์
+                    ไม่ต้องทำการทดสอบข้อเขียน ให้มารายงานตัวและมอบตัวตามวันและเวลาที่กำหนด</p>
+                <hr>
+                <p class="mb-0">โรงเรียนสวนกุหลาบวิทยาลัย (จิรประวัติ) นครสวรรค์</p>
+            </div>
         </div>
+
+
 
 
 
